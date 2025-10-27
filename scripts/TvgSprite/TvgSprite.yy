@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TvgSprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TvgSprite",
+  "parent":{
+    "name":"ThorVG",
+    "path":"folders/ThorVG.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

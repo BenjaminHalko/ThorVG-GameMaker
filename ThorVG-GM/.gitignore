@@ -1,0 +1,9 @@
+# IDE Caches
+.cache/
+.idea/
+.vscode/
+build*/
+
+# Subprojects
+subprojects/**
+!subprojects/thorvg.wrap
