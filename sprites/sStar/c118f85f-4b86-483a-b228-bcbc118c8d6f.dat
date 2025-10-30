@@ -1,7 +1,8 @@
 {
-  "$GMShape":"v1",
+  "$GMShape":"v2",
   "%Name":"",
   "baked":false,
+  "hiddenGeometryClipped":false,
   "maxX":400.0,
   "maxY":400.0,
   "minX":0.0,

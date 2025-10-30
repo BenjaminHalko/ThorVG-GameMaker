@@ -16,7 +16,7 @@
   "exportToGame":true,
   "extensionVersion":"0.0.1",
   "files":[
-    {"$GMExtensionFile":"","%Name":"","constants":[],"copyToTargets":194,"filename":"ThorVG.ext","final":"__tvg_term","functions":[
+    {"$GMExtensionFile":"v1","%Name":"","constants":[],"copyToTargets":194,"filename":"ThorVG.ext","final":"__tvg_term","functions":[
         {"$GMExtensionFunction":"","%Name":"__tvg_init","argCount":0,"args":[],"documentation":"","externalName":"tvg_init","help":"","hidden":false,"kind":4,"name":"__tvg_init","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"__tvg_term","argCount":0,"args":[],"documentation":"","externalName":"tvg_term","help":"","hidden":false,"kind":4,"name":"__tvg_term","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"__tvg_create","argCount":0,"args":[1,1,2,],"documentation":"","externalName":"tvg_create","help":"","hidden":false,"kind":4,"name":"__tvg_create","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
@@ -24,7 +24,7 @@
         {"$GMExtensionFunction":"","%Name":"__tvg_set_target","argCount":0,"args":[1,1,2,2,],"documentation":"","externalName":"tvg_set_target","help":"","hidden":false,"kind":4,"name":"__tvg_set_target","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"__tvg_draw","argCount":0,"args":[1,2,],"documentation":"","externalName":"tvg_draw","help":"","hidden":false,"kind":4,"name":"__tvg_draw","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"__tvg_set_frame","argCount":0,"args":[1,2,],"documentation":"","externalName":"tvg_set_frame","help":"","hidden":false,"kind":4,"name":"__tvg_set_frame","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
-      ],"init":"__tvg_init","kind":4,"name":"","order":[],"origname":"","ProxyFiles":[
+      ],"init":"__tvg_init","kind":4,"name":"","origname":"","ProxyFiles":[
         {"$GMProxyFile":"","%Name":"libthorvg-gm.dylib","name":"libthorvg-gm.dylib","resourceType":"GMProxyFile","resourceVersion":"2.0","TargetMask":1,},
         {"$GMProxyFile":"","%Name":"thorvg-gm.dll","name":"thorvg-gm.dll","resourceType":"GMProxyFile","resourceVersion":"2.0","TargetMask":6,},
         {"$GMProxyFile":"","%Name":"libthorvg-gm.so","name":"libthorvg-gm.so","resourceType":"GMProxyFile","resourceVersion":"2.0","TargetMask":7,},
