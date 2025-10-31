@@ -1,5 +1,5 @@
 [wrap-git]
 directory = thorvg
 url = https://github.com/thorvg/thorvg.git
-revision = v1.0-pre30
+revision = v1.0-pre31
 depth = 1

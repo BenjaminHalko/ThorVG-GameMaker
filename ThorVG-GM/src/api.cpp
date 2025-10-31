@@ -18,7 +18,6 @@ struct GM_Data {
 
     tvg::SwCanvas* canvas;
     tvg::Animation* paint;
-    uint32_t* buffer;
 };
 
 GM_API double tvg_init() {
@@ -54,16 +53,20 @@ GM_API double tvg_create(
 }
 
 GM_API void tvg_destory(GM_Data* data) {
-    delete data->paint;
-    delete data->canvas;
+    delete(data->paint);
+    delete(data->canvas);
 }
 
 GM_API double tvg_set_target(GM_Data* data, uint32_t* buffer, double width, double height) {
     CHECK(data->paint->picture()->size(width, height));
 
-    data->buffer = buffer;
-    data->width = width;
-    data->height = height;
+    CHECK(data->canvas->target(
+        buffer,
+        width,
+        width,
+        height,
+        tvg::ColorSpace::ABGR8888S
+    ));
 
     return 0;
 }
@@ -72,14 +75,7 @@ GM_API double tvg_draw(
     GM_Data* data,
     double clear
 ) {
-    CHECK(data->canvas->sync());
-    CHECK(data->canvas->target(
-        data->buffer,
-        data->width,
-        data->width,
-        data->height,
-        tvg::ColorSpace::ABGR8888S
-    ));
+    CHECK(data->canvas->update());
     CHECK(data->canvas->draw(clear));
     CHECK(data->canvas->sync());
 
