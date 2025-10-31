@@ -8,7 +8,7 @@ function __tvg_check(_result, _reason) {
 
 /// @param	{string} data
 function TvgSprite(_data) constructor {
-	__tvgData = buffer_create(40, buffer_fixed, 1);
+	__tvgData = buffer_create(32, buffer_fixed, 1);
 	__tvgDataAddress = buffer_get_address(__tvgData);
 	
 	// Create
