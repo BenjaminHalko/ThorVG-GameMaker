@@ -21,11 +21,15 @@ struct GM_Data {
 };
 
 GM_API double tvg_init() {
-    return static_cast<double>(tvg::Initializer::init(0));
+    CHECK(tvg::Initializer::init(0));
+
+    return 0;
 }
 
 GM_API double tvg_term() {
-    return static_cast<double>(tvg::Initializer::term());
+    CHECK(tvg::Initializer::term());
+
+    return 0;
 }
 
 GM_API double tvg_create(
