@@ -83,7 +83,7 @@ GM_API double tvg_draw(
 }
 
 GM_API double tvg_set_frame(GM_Data* data, double frame) {
-    data->animation->frame(frame);
+    CHECK(data->animation->frame(frame));
 
     return 0;
 }
