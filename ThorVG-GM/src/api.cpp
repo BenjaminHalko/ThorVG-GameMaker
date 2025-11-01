@@ -17,7 +17,7 @@ struct GM_Data {
     uint32_t totalFrames;
 
     tvg::SwCanvas* canvas;
-    tvg::Animation* paint;
+    tvg::Animation* animation;
 };
 
 GM_API double tvg_init() {
@@ -34,10 +34,10 @@ GM_API double tvg_create(
     double picture_data_size
 ) {
     data->canvas = tvg::SwCanvas::gen();
-    data->paint = tvg::Animation::gen();
+    data->animation = tvg::Animation::gen();
 
     // Load picture
-    const auto picture = data->paint->picture();
+    const auto picture = data->animation->picture();
     CHECK(picture->load(picture_data, picture_data_size, ""));
     CHECK(data->canvas->push(picture));
 
@@ -46,19 +46,19 @@ GM_API double tvg_create(
     CHECK(picture->size(&width, &height));
     data->width = static_cast<uint32_t>(width);
     data->height = static_cast<uint32_t>(height);
-    data->duration = static_cast<uint32_t>(data->paint->duration());
-    data->totalFrames = static_cast<uint32_t>(data->paint->totalFrame());
+    data->duration = static_cast<uint32_t>(data->animation->duration());
+    data->totalFrames = static_cast<uint32_t>(data->animation->totalFrame());
 
     return 0;
 }
 
 GM_API void tvg_destory(GM_Data* data) {
-    delete(data->paint);
+    delete(data->animation);
     delete(data->canvas);
 }
 
 GM_API double tvg_set_target(GM_Data* data, uint32_t* buffer, double width, double height) {
-    CHECK(data->paint->picture()->size(width, height));
+    CHECK(data->animation->picture()->size(width, height));
 
     CHECK(data->canvas->target(
         buffer,
@@ -83,7 +83,7 @@ GM_API double tvg_draw(
 }
 
 GM_API double tvg_set_frame(GM_Data* data, double frame) {
-    data->paint->frame(frame);
+    data->animation->frame(frame);
 
     return 0;
 }
